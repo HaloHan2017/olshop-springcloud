@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
+      defaultZone: http://127.0.0.1:9010/eureka
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
@@ -30,3 +30,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMillisecond: 10000 # 熔断超时时长：10000ms
+# 配置需要跨域的地址
+my:
+  allowOrigins:
+    - http://admin.olshop.com

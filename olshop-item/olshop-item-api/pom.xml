@@ -24,5 +24,10 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.tys</groupId>
+            <artifactId>olshop-common</artifactId>
+            <version>${olshop.version}</version>
+        </dependency>
     </dependencies>
 </project>

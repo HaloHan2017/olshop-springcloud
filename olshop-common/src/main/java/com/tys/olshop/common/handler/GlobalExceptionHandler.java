@@ -20,6 +20,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler
     public void configureHandlerExceptionResolvers(List<HandlerExceptionResolver> exceptionResolvers) {
         exceptionResolvers.add(new HandlerExceptionResolver() {
+            @Override
             public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception e) {
                 Result result = new Result();
                 if (e instanceof ServiceException) {//业务失败的异常，如“账号或密码错误”
@@ -47,7 +48,6 @@ public class GlobalExceptionHandler {
 //                responseResult(response, result);
                 return new ModelAndView();
             }
-
         });
     }
 }
