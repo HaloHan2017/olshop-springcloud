@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler

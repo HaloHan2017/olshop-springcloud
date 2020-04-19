@@ -10,7 +10,10 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 public final class CookieUtils {
 
     protected static final Logger logger = LoggerFactory.getLogger(CookieUtils.class);

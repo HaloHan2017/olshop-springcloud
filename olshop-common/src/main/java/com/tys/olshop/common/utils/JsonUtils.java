@@ -10,14 +10,17 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 public class JsonUtils {
 
     public static final ObjectMapper mapper = new ObjectMapper();
 
     private static final Logger logger = LoggerFactory.getLogger(JsonUtils.class);
 
-    //@Nullable
+    //    @Nullable
     public static String serialize(Object obj) {
         if (obj == null) {
             return null;

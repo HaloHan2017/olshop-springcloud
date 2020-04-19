@@ -12,9 +12,13 @@ public class CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
-    public List<Category> queryListByParent(Long parentId) {
+    public List<Category> queryCategoriesByParentId(Long parentId) {
         Category category = new Category();
         category.setParentId(parentId);
-        return this.categoryMapper.select(category);
+        return categoryMapper.select(category);
+    }
+
+    public List<Category> queryCategoriesByBrandId(Long brandId) {
+        return categoryMapper.queryCategoriesByBrandId(brandId);
     }
 }

@@ -20,10 +20,19 @@ public class CategoryController {
     @GetMapping("list")
     public ResponseEntity<List<Category>> queryByParentId(
             @RequestParam(value = "pid", defaultValue = "0") Long parentId) {
-        List<Category> list = categoryService.queryListByParent(parentId);
+        List<Category> list = categoryService.queryCategoriesByParentId(parentId);
         if (CollectionUtils.isEmpty(list)) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return ResponseEntity.ok(list);
+    }
+
+    @GetMapping("bid/{bid}")
+    public ResponseEntity<List<Category>> queryByBrandId(@PathVariable("bid") Long brandId) {
+        List<Category> categories = categoryService.queryCategoriesByBrandId(brandId);
+        if (CollectionUtils.isEmpty(categories)) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(categories);
     }
 }

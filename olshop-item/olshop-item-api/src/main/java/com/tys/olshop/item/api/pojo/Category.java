@@ -9,6 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
+/**
+ * @author TYS
+ * @date 2020/4/17 20:50
+ */
 @Data
 @Accessors(chain = true)
 @Table(name = "tb_category")

@@ -1,5 +1,9 @@
 package com.tys.olshop.common.core;
 
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 public enum ResultCode {
     SUCCESS(200),//成功
     FAIL(400),//失败

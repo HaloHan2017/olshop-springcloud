@@ -6,8 +6,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.100.123.185:3306/olshop?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
-    username: tanyuesong
+    url: jdbc:mysql://127.0.0.1:3306/olshop?serverTimezone=UTC&autoReconnect=true&failOverReadOnly=false
+    username: root
     password: HaloHan2017
     hikari:
       maximum-pool-size: 30

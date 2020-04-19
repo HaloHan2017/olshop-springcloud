@@ -4,6 +4,10 @@ import java.lang.management.ManagementFactory;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 public class IdWorker {
     /**
      * 时间起始标记点，作为基准，一般取系统的最近时间（一旦确定不能变动）

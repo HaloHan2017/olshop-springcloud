@@ -1,5 +1,14 @@
 package com.tys.olshop.common.core;
 
+import lombok.Getter;
+import lombok.experimental.Accessors;
+
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
+@Getter
+@Accessors(chain = true)
 public class Result {
     private int code;
     private String message;
@@ -18,19 +27,5 @@ public class Result {
     public Result setData(Object data) {
         this.data = data;
         return this;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-
-    public String getMessage() {
-        return message;
-    }
-
-
-    public Object getData() {
-        return data;
     }
 }

@@ -1,5 +1,9 @@
 package com.tys.olshop.common.core;
 
+/**
+ * @author TYS
+ * @date 2020/4/18 13:53
+ */
 public class ResultGenerator {
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
 
