@@ -49,4 +49,8 @@ public class BrandService {
     public void deleteBrandById(Long brandId) {
         brandMapper.deleteByPrimaryKey(brandId);
     }
+
+    public List<Brand> queryBrandsByCategoryId(Long categoryId) {
+        return brandMapper.queryBrandsByCategoryId(categoryId);
+    }
 }
