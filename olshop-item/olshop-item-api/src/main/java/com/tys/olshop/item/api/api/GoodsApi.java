@@ -3,6 +3,7 @@ package com.tys.olshop.item.api.api;
 import com.tys.olshop.common.core.PageResult;
 import com.tys.olshop.item.api.bo.SpuBo;
 import com.tys.olshop.item.api.pojo.Sku;
+import com.tys.olshop.item.api.pojo.Spu;
 import com.tys.olshop.item.api.pojo.SpuDetail;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,4 +40,7 @@ public interface GoodsApi {
 
     @GetMapping("/sku/{id}")
     Sku querySkuById(@PathVariable("id") Long id);
+
+    @GetMapping("spu/{id}")
+    Spu querySpuById(@PathVariable("id") Long id);
 }

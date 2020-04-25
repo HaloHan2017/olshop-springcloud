@@ -9,6 +9,7 @@
         <module>olshop-common</module>
         <module>olshop-upload</module>
         <module>olshop-search</module>
+        <module>olshop-goods-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

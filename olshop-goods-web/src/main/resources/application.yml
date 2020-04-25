@@ -1,14 +1,10 @@
 server:
-  port: 8093
+  port: 8094
 spring:
   application:
-    name: search-service
-  data:
-    elasticsearch:
-      cluster-name: elasticsearch
-      cluster-nodes: 127.0.0.1:9300
-      repositories:
-        enabled: true
+    name: goods-page
+  thymeleaf:
+    cache: false
 #  rabbitmq:
 #    host: 192.168.56.101
 #    username: leyou
@@ -23,6 +19,5 @@ eureka:
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期
     prefer-ip-address: true
     ip-address: 127.0.0.1
-    instance-id: ${spring.application.name}:${server.port}
-  jackson:
-    default-property-inclusion: non_null # 配置json处理时忽略空值
+    instance-id: ${spring.application.name}.${server.port}
+storageHtmlPath: C:/nginx-1.16.1/item/
