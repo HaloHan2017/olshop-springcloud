@@ -52,6 +52,15 @@ public class BrandController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @GetMapping("cid/{cid}")
+    public ResponseEntity<List<Brand>> queryBrandByCategoryId(@PathVariable("cid") Long categoryId) {
+        List<Brand> brands = brandService.queryBrandsByCategoryId(categoryId);
+        if (CollectionUtils.isEmpty(brands)) {
+            new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return ResponseEntity.ok(brands);
+    }
+
     private List<Long> parseLongFromString(String categoryIdsString) {
         List<Long> categoryIds = new ArrayList<>();
         if (StringUtils.isEmpty(categoryIdsString)) {
